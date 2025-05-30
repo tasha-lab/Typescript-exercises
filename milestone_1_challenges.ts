@@ -55,3 +55,62 @@ function findLargest(a:number, b:number, c:number){
 findLargest(3,4,5)
 findLargest(2,-4,-5)
 findLargest(-3,444,50)
+
+//7. BMI Calculator
+function calculateBMI(weight:number, height:number):void{
+      let BMI = weight / (height * height)
+
+      if(BMI<18.5){
+            console.log(`Underweight`)
+      }else if(BMI>=18.5 && BMI<=24.9){
+            console.log(`Normal Weight`)
+      }else if(BMI>=25 && BMI<=29.9){
+            console.log(`Overweight`)
+      }else{
+            console.log(`Obese`)
+      }
+}
+calculateBMI(57,5.2)
+calculateBMI(85, 1.8);
+
+//8. Greeting Based On Time
+function greetUser(name:string, hour:number):void{
+      if(hour>= 5 && hour <= 11){
+            console.log(`Good morning, ${name}!`)
+      }else if (hour >=12 && hour<=17){
+            console.log(`Goodafternoon ${name}!`)
+      }else if(hour >=18 && hour<=21){
+            console.log(` Goodevening, ${name}!`)
+      }else{
+            console.log(`Goodnight, ${name}!`)
+      }
+}
+greetUser("Tasha",5)
+greetUser("Tasha",23)
+
+//9. FizzBuzz
+function fizzBuzzCheck(num:number){
+      if(num%3===0 && num%5===0){
+            console.log(`FizzBuzz`)
+      }else if(num%3===0){
+            console.log(`Fizz`)
+      }else if(num%5===0){
+            console.log(`Buzz`)
+      }
+}
+fizzBuzzCheck(15)
+fizzBuzzCheck(10)
+fizzBuzzCheck(9)
+
+//10. Perimeter 2
+function secondPerimeter(l:string, num:number):void{
+      if(l = "s"){
+            console.log(4*num)
+      }else if(l = "c"){
+            console.log(2*6.28*num)
+      }
+}
+secondPerimeter("c", 10)
+secondPerimeter("s",4)
+
+

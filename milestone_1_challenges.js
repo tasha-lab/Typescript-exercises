@@ -52,3 +52,4 @@ function findLargest(a, b, c) {
 }
 findLargest(3, 4, 5);
 findLargest(2, -4, -5);
+findLargest(-3, 444, 50);

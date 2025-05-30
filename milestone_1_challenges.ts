@@ -54,3 +54,4 @@ function findLargest(a:number, b:number, c:number){
 }
 findLargest(3,4,5)
 findLargest(2,-4,-5)
+findLargest(-3,444,50)

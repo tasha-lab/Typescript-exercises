@@ -114,3 +114,54 @@ function secondPerimeter(l, num) {
 }
 secondPerimeter("c", 10);
 secondPerimeter("s", 4);
+//11. Sum of Even Numbers
+function sumEvenNumbers(n) {
+    var sum = 0;
+    for (var i = 2; i <= n; i += 2) {
+        sum += i;
+    }
+    console.log(sum);
+}
+sumEvenNumbers(10);
+sumEvenNumbers(20);
+//12. Multiply by Itself
+function powerUp(num, times) {
+    var answer = 1;
+    for (var i = 1; i <= times; i++) {
+        answer = answer * num;
+    }
+    console.log(answer);
+}
+powerUp(3, 4);
+powerUp(2, 5);
+//13. Factorial Calculator
+function factorial(n) {
+    var answer = 1;
+    for (var i = 1; i <= n; i++) {
+        answer = answer * i;
+    }
+    console.log(answer);
+}
+factorial(5);
+factorial(4);
+//14. Multiple Sum
+function sumMultiples(n, divisor) {
+    var sum = 0;
+    for (var i = 1; i <= n; i++) {
+        if (i % divisor === 0) {
+            sum = sum + i;
+        }
+    }
+    return sum;
+}
+console.log(sumMultiples(10, 2));
+console.log(sumMultiples(15, 3));
+//15. Sum of Digits
+function sumDigits(num) {
+    var sum = 0;
+    for (var i = 1; num > 0; num = Math.floor(num / 10)) {
+        sum = sum + (num % 10);
+    }
+    return sum;
+}
+console.log(sumDigits(234));

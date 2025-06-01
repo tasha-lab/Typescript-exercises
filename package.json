@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"tsc milestone_1_challenges && node milestone_1_challenges"
+    "dev":"tsc milestone_2_challenges && node milestone_2_challenges"
   },
   "keywords": [],
   "author": "",

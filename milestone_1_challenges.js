@@ -1,8 +1,8 @@
-//1. Return the Sum of Two Numbers
-function addition(a, b) {
-    console.log(a + b);
-}
-addition(4, 5);
+// //1. Return the Sum of Two Numbers
+// function addition( a:number, b:number): void{
+//       console.log(a +b);
+// }
+// addition(4,5)
 //2. Convert Minutes into Seconds
 function convert(min) {
     var convertedMinutes = min * 60;

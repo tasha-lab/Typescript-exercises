@@ -139,7 +139,7 @@ interface MyObject {
   //10. Average of Numbers
 
   function average(array:number[]):void{
-    let average= 0
+    let average:number = 0
     if(array.length===0){
         console.log(0)
         return;
@@ -153,3 +153,109 @@ interface MyObject {
   }
   average([2, 4, 6, 8])
   average([])
+
+  //11. Linear Search
+
+  function linearSearch (array:number[], value:number): void{
+    // let currentValue =[0]
+    for(let i=0; i<array.length;i++){
+        if(array[i]===value){
+            console.log (i)
+            return
+        }
+       
+    }
+
+    console.log(-1)
+  }
+  linearSearch([2,4,5,6],5)
+  linearSearch([2,4,5,6],4)
+
+  //12. Reverse Linear Search
+
+  function reverseLinearSearch(array:number[], value:number):void{
+    for(let i = array.length - 1; i >= 0; i--){
+        if(array[i]===value){
+            console.log (i)
+            return
+        }
+    }
+    console.log(-1)
+  }
+  reverseLinearSearch([2,4,5,6],5)
+  reverseLinearSearch([5, 3, 7, 1, 4, 7], 7)
+  reverseLinearSearch([1, 2, 3, 4, 5], 10)
+
+  //13. Linear Search All Indices
+  function linearSearchAll(array:number[], value:number):void{
+    let match =[]
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === value) {
+            match.push(i);
+        }
+  }
+  console.log(match)
+}
+linearSearchAll([2,4,5,6],5)
+linearSearchAll([5, 3, 7, 1, 4, 7], 7)
+linearSearchAll([1, 2, 3, 4, 5], 10)
+
+//14. Count Occurrences
+let myObject:{ [key:string]:number} ={}
+function countOccurrences(words:string[]): void {
+    myObject = {}
+    for (let i = 0; i < words.length; i++) {
+        let item = words[i];
+        if (myObject[item]) {
+          myObject[item]= myObject[item] + 1
+        } else {
+          myObject[item] = 1
+        }
+      }
+      console.log(myObject)
+}
+
+countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"]);
+countOccurrences(["ten", "five", "apple", "one", "ten", "one"]);
+
+//15. Remove Duplicates
+function removeDuplicates(array: number[]): void {
+    let newArray: number[] = [];
+    for (let i = 0; i < array.length; i++) {
+      if (newArray.indexOf(array[i]) === -1) {
+        newArray.push(array[i]);
+      }
+    }
+    console.log(newArray);
+  }
+  
+  removeDuplicates([1, 2, 3, 2, 4, 1, 5]);
+removeDuplicates([1, 6, 6, 7, 6, 6, 3, 4, 2, 1]);
+  
+//16. Most Frequent
+const mostFrequent = (arr: unknown[]) => {
+    const count: { [key: string]: number } = {};
+    let max = 0;
+    let result: unknown = undefined;
+  
+    for (let i = 0; i < arr.length; i++) {
+      const item = arr[i];
+      const key = String(item);
+      if (count[key]) {
+        count[key]++;
+      } else {
+        count[key] = 1;
+      }
+  
+      if (count[key] > max) {
+        max = count[key];
+        result = item;
+      }
+    }
+  console.log(result);
+    return result;
+  };
+  mostFrequent(["hello","hello","me",1,1]);
+      
+  
+  

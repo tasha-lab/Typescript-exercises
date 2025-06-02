@@ -114,3 +114,94 @@ function average(array) {
 }
 average([2, 4, 6, 8]);
 average([]);
+//11. Linear Search
+function linearSearch(array, value) {
+    // let currentValue =[0]
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === value) {
+            console.log(i);
+            return;
+        }
+    }
+    console.log(-1);
+}
+linearSearch([2, 4, 5, 6], 5);
+linearSearch([2, 4, 5, 6], 4);
+//12. Reverse Linear Search
+function reverseLinearSearch(array, value) {
+    for (var i = array.length - 1; i >= 0; i--) {
+        if (array[i] === value) {
+            console.log(i);
+            return;
+        }
+    }
+    console.log(-1);
+}
+reverseLinearSearch([2, 4, 5, 6], 5);
+reverseLinearSearch([5, 3, 7, 1, 4, 7], 7);
+reverseLinearSearch([1, 2, 3, 4, 5], 10);
+//13. Linear Search All Indices
+function linearSearchAll(array, value) {
+    var match = [];
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === value) {
+            match.push(i);
+        }
+    }
+    console.log(match);
+}
+linearSearchAll([2, 4, 5, 6], 5);
+linearSearchAll([5, 3, 7, 1, 4, 7], 7);
+linearSearchAll([1, 2, 3, 4, 5], 10);
+//14. Count Occurrences
+var myObject = {};
+function countOccurrences(words) {
+    myObject = {};
+    for (var i = 0; i < words.length; i++) {
+        var item = words[i];
+        if (myObject[item]) {
+            myObject[item] = myObject[item] + 1;
+        }
+        else {
+            myObject[item] = 1;
+        }
+    }
+    console.log(myObject);
+}
+countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"]);
+countOccurrences(["ten", "five", "apple", "one", "ten", "one"]);
+//15. Remove Duplicates
+function removeDuplicates(array) {
+    var newArray = [];
+    for (var i = 0; i < array.length; i++) {
+        if (newArray.indexOf(array[i]) === -1) {
+            newArray.push(array[i]);
+        }
+    }
+    console.log(newArray);
+}
+removeDuplicates([1, 2, 3, 2, 4, 1, 5]);
+removeDuplicates([1, 6, 6, 7, 6, 6, 3, 4, 2, 1]);
+//16. Most Frequent
+var mostFrequent = function (arr) {
+    var count = {};
+    var max = 0;
+    var result = undefined;
+    for (var i = 0; i < arr.length; i++) {
+        var item = arr[i];
+        var key = String(item);
+        if (count[key]) {
+            count[key]++;
+        }
+        else {
+            count[key] = 1;
+        }
+        if (count[key] > max) {
+            max = count[key];
+            result = item;
+        }
+    }
+    console.log(result);
+    return result;
+};
+mostFrequent(["hello", "hello", "me", 1, 1]);

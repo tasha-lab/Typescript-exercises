@@ -114,15 +114,15 @@ secondPerimeter("c", 10)
 secondPerimeter("s",4)
 
 //11. Sum of Even Numbers
-function sumEvenNumbers(n :number):void{
+function sumEvenNumber(n :number):void{
       let sum = 0
       for(let i = 2; i<=n; i+=2){
             sum += i
       }
       console.log(sum)
 }
-sumEvenNumbers(10)
-sumEvenNumbers(20)
+sumEvenNumber(10)
+sumEvenNumber(20)
 
 //12. Multiply by Itself
 function powerUp(num:number, times:number):void{
